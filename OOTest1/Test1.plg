@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Test1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Test1.res" /d "_DEBUG" "D:\Devel\OO\Test1\Test1.rc"" 
+Creating temporary file "C:\DOCUME~1\jmf\LOCALS~1\Temp\RSP439.tmp" with contents
+[
+/nologo /G5 /Zp4 /MLd /W3 /Gm /Gi /Zi /Od /Ob1 /I "..\OOInc" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /FR".\Debug/" /Fp".\Debug/Test1.pch" /YX /Fo".\Debug/" /Fd".\Debug/" /FD /c 
+"D:\Devel\OO\Test1\Test1.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jmf\LOCALS~1\Temp\RSP439.tmp" 
+Creating temporary file "C:\DOCUME~1\jmf\LOCALS~1\Temp\RSP43A.tmp" with contents
+[
+opengl32.lib glu32.lib glaux.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ..\OOLib\Debug\oo.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Test1.pdb" /debug /machine:I386 /out:"Debug/Test1.exe" /pdbtype:sept 
+.\Debug\Test1.obj
+.\Debug\Test1.res
+]
+Creating command line "link.exe @C:\DOCUME~1\jmf\LOCALS~1\Temp\RSP43A.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Test1.c
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/Test1.bsc"  .\Debug\Test1.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Test1.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

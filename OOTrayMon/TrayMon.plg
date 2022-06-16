@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TrayMon - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\tmpsys\RSP34B.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /FR"Release/" /Fp"Release/TrayMon.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\src\OO\TrayMon\main.c"
+]
+Creating command line "cl.exe @D:\tmpsys\RSP34B.tmp" 
+Creating temporary file "D:\tmpsys\RSP34C.tmp" with contents
+[
+..\OOLib\Release\oo.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/TrayMon.pdb" /machine:I386 /out:"Release/TrayMon.exe" 
+.\Release\main.obj
+.\Release\TrayMon.res
+\src\OO\OOLib\Release\oo.lib
+]
+Creating command line "link.exe @D:\tmpsys\RSP34C.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.c
+D:\src\OO\TrayMon\main.c(15) : fatal error C1083: Cannot open include file: 'ootypes.h': No such file or directory
+Error executing cl.exe.
+Creating command line "bscmake.exe /nologo /o"Release/TrayMon.bsc"  .\Release\main.sbr"
+Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Release\main.sbr': No such file or directory
+Error executing bscmake.exe.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+TrayMon.exe - 2 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
