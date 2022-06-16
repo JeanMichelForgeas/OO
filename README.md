@@ -1,2 +1,2 @@
 # OO
-OO (Object Organizer) - An object engine
+Object Organizer for Amiga OS - An object engine
