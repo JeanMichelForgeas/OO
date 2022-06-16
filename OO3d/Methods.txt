@@ -1,0 +1,46 @@
+(tabulations = 4)
+
+Prog	-->		Handle3D	-->		3DSpace		-->		3DSolid
+
+	D3M_START3D			D3M_START3D			D3M_START3D
+						
+	D3M_STOP3D			D3M_STOP3D			D3M_STOP3D
+						
+	OOM_HANDLEEVENT		D3M_MOVEALL			D3M_SETSPEED
+											D3M_DOSPACECOL
+											D3M_DOOBJECTCOL
+											D3M_DOACTION
+											D3M_SETIMAGE
+																(source vidéo)
+												-->		3DScreen	-->		3DCamera, 3DMagnetoscope, etc...
+
+						D3M_CLEARVIEW		D3M_CLEARSCREEN     
+											                    
+						D3M_OBJTOVIEW		D3M_OBJTOSCREEN		D3M_OBJTOCAMERA	(liste des objets visibles)	
+											                    
+						D3M_REFRESHVIEW		D3M_DRAWSCREEN		D3M_DRAW
+											                    
+						D3M_SYNCREFRESH		D3M_SYNCREFRESH     
+
+																(source sonore)
+ 												-->		3DSpeaker	-->		3DMike, 3DMagnetoscope, etc...
+
+						D3M_CLEARVIEW		
+											                    
+						D3M_OBJTOVIEW		D3M_OBJTOSPEAKER	D3M_OBJTOMIKE	(liste des objets audibles)
+											                    
+						D3M_REFRESHVIEW		D3M_PLAYSOUND		D3M_MIXSOUND
+											                    
+						D3M_SYNCREFRESH		     
+
+																(source sonore)			  +-3DMagnetoscope
+ 												-->		3DSpeaker	-->		3DMixer	  ->  | 3DMike
+																						  | 3DAmpli
+						D3M_CLEARVIEW													  +-etc...
+											                    
+						D3M_OBJTOVIEW		D3M_OBJTOSPEAKER	D3M_OBJTOMIKE		D3M_OBJTOMIKE	(liste des objets audibles)
+											                    
+						D3M_REFRESHVIEW		D3M_PLAYSOUND 		D3M_MIXSOUND		D3M_MIXSOUND
+											                    
+						D3M_SYNCREFRESH		     
+

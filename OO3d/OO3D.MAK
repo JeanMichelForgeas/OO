@@ -1,0 +1,919 @@
+# Microsoft Developer Studio Generated NMAKE File, Format Version 4.20
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (x86) Static Library" 0x0104
+
+!IF "$(CFG)" == ""
+CFG=OO3D - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to OO3D - Win32 Debug.
+!ENDIF 
+
+!IF "$(CFG)" != "OO3D - Win32 Release" && "$(CFG)" != "OO3D - Win32 Debug"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE on this makefile
+!MESSAGE by defining the macro CFG on the command line.  For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "OO3D.mak" CFG="OO3D - Win32 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "OO3D - Win32 Release" (based on "Win32 (x86) Static Library")
+!MESSAGE "OO3D - Win32 Debug" (based on "Win32 (x86) Static Library")
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+################################################################################
+# Begin Project
+# PROP Target_Last_Scanned "OO3D - Win32 Debug"
+CPP=cl.exe
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "OO3D___W"
+# PROP BASE Intermediate_Dir "OO3D___W"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "Release"
+# PROP Intermediate_Dir "Release"
+# PROP Target_Dir ""
+OUTDIR=.\Release
+INTDIR=.\Release
+
+ALL : "$(OUTDIR)\OO3D.lib" "$(OUTDIR)\OO3D.bsc"
+
+CLEAN : 
+	-@erase "$(INTDIR)\3dsfile.obj"
+	-@erase "$(INTDIR)\3dsfile.sbr"
+	-@erase "$(INTDIR)\Class_3DCamera.obj"
+	-@erase "$(INTDIR)\Class_3DCamera.sbr"
+	-@erase "$(INTDIR)\Class_3DLight.obj"
+	-@erase "$(INTDIR)\Class_3DLight.sbr"
+	-@erase "$(INTDIR)\Class_3DMike.obj"
+	-@erase "$(INTDIR)\Class_3DMike.sbr"
+	-@erase "$(INTDIR)\Class_3DScreen.obj"
+	-@erase "$(INTDIR)\Class_3DScreen.sbr"
+	-@erase "$(INTDIR)\Class_3DSoleil.obj"
+	-@erase "$(INTDIR)\Class_3DSoleil.sbr"
+	-@erase "$(INTDIR)\Class_3DSolid.obj"
+	-@erase "$(INTDIR)\Class_3DSolid.sbr"
+	-@erase "$(INTDIR)\Class_3DSpace.obj"
+	-@erase "$(INTDIR)\Class_3DSpace.sbr"
+	-@erase "$(INTDIR)\Class_3DSpeaker.obj"
+	-@erase "$(INTDIR)\Class_3DSpeaker.sbr"
+	-@erase "$(INTDIR)\Class_Handle3D.obj"
+	-@erase "$(INTDIR)\Class_Handle3D.sbr"
+	-@erase "$(INTDIR)\Clip.obj"
+	-@erase "$(INTDIR)\Clip.sbr"
+	-@erase "$(INTDIR)\Init.obj"
+	-@erase "$(INTDIR)\Init.sbr"
+	-@erase "$(INTDIR)\Math.obj"
+	-@erase "$(INTDIR)\Math.sbr"
+	-@erase "$(OUTDIR)\OO3D.bsc"
+	-@erase "$(OUTDIR)\OO3D.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+# ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /c
+# ADD CPP /nologo /G5 /Zp4 /W3 /Gi /O2 /I "..\OOInc" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /FR /YX /c
+CPP_PROJ=/nologo /G5 /Zp4 /ML /W3 /Gi /O2 /I "..\OOInc" /D "WIN32" /D "NDEBUG"\
+ /D "_WINDOWS" /FR"$(INTDIR)/" /Fp"$(INTDIR)/OO3D.pch" /YX /Fo"$(INTDIR)/"\
+ /Fd"$(INTDIR)/" /c 
+CPP_OBJS=.\Release/
+CPP_SBRS=.\Release/
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/OO3D.bsc" 
+BSC32_SBRS= \
+	"$(INTDIR)\3dsfile.sbr" \
+	"$(INTDIR)\Class_3DCamera.sbr" \
+	"$(INTDIR)\Class_3DLight.sbr" \
+	"$(INTDIR)\Class_3DMike.sbr" \
+	"$(INTDIR)\Class_3DScreen.sbr" \
+	"$(INTDIR)\Class_3DSoleil.sbr" \
+	"$(INTDIR)\Class_3DSolid.sbr" \
+	"$(INTDIR)\Class_3DSpace.sbr" \
+	"$(INTDIR)\Class_3DSpeaker.sbr" \
+	"$(INTDIR)\Class_Handle3D.sbr" \
+	"$(INTDIR)\Clip.sbr" \
+	"$(INTDIR)\Init.sbr" \
+	"$(INTDIR)\Math.sbr"
+
+"$(OUTDIR)\OO3D.bsc" : "$(OUTDIR)" $(BSC32_SBRS)
+    $(BSC32) @<<
+  $(BSC32_FLAGS) $(BSC32_SBRS)
+<<
+
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+LIB32_FLAGS=/nologo /out:"$(OUTDIR)/OO3D.lib" 
+LIB32_OBJS= \
+	"$(INTDIR)\3dsfile.obj" \
+	"$(INTDIR)\Class_3DCamera.obj" \
+	"$(INTDIR)\Class_3DLight.obj" \
+	"$(INTDIR)\Class_3DMike.obj" \
+	"$(INTDIR)\Class_3DScreen.obj" \
+	"$(INTDIR)\Class_3DSoleil.obj" \
+	"$(INTDIR)\Class_3DSolid.obj" \
+	"$(INTDIR)\Class_3DSpace.obj" \
+	"$(INTDIR)\Class_3DSpeaker.obj" \
+	"$(INTDIR)\Class_Handle3D.obj" \
+	"$(INTDIR)\Clip.obj" \
+	"$(INTDIR)\Init.obj" \
+	"$(INTDIR)\Math.obj"
+
+"$(OUTDIR)\OO3D.lib" : "$(OUTDIR)" $(DEF_FILE) $(LIB32_OBJS)
+    $(LIB32) @<<
+  $(LIB32_FLAGS) $(DEF_FLAGS) $(LIB32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "OO3D___0"
+# PROP BASE Intermediate_Dir "OO3D___0"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "Debug"
+# PROP Intermediate_Dir "Debug"
+# PROP Target_Dir ""
+OUTDIR=.\Debug
+INTDIR=.\Debug
+
+ALL : "$(OUTDIR)\OO3D.lib" "$(OUTDIR)\OO3D.bsc"
+
+CLEAN : 
+	-@erase "$(INTDIR)\3dsfile.obj"
+	-@erase "$(INTDIR)\3dsfile.sbr"
+	-@erase "$(INTDIR)\Class_3DCamera.obj"
+	-@erase "$(INTDIR)\Class_3DCamera.sbr"
+	-@erase "$(INTDIR)\Class_3DLight.obj"
+	-@erase "$(INTDIR)\Class_3DLight.sbr"
+	-@erase "$(INTDIR)\Class_3DMike.obj"
+	-@erase "$(INTDIR)\Class_3DMike.sbr"
+	-@erase "$(INTDIR)\Class_3DScreen.obj"
+	-@erase "$(INTDIR)\Class_3DScreen.sbr"
+	-@erase "$(INTDIR)\Class_3DSoleil.obj"
+	-@erase "$(INTDIR)\Class_3DSoleil.sbr"
+	-@erase "$(INTDIR)\Class_3DSolid.obj"
+	-@erase "$(INTDIR)\Class_3DSolid.sbr"
+	-@erase "$(INTDIR)\Class_3DSpace.obj"
+	-@erase "$(INTDIR)\Class_3DSpace.sbr"
+	-@erase "$(INTDIR)\Class_3DSpeaker.obj"
+	-@erase "$(INTDIR)\Class_3DSpeaker.sbr"
+	-@erase "$(INTDIR)\Class_Handle3D.obj"
+	-@erase "$(INTDIR)\Class_Handle3D.sbr"
+	-@erase "$(INTDIR)\Clip.obj"
+	-@erase "$(INTDIR)\Clip.sbr"
+	-@erase "$(INTDIR)\Init.obj"
+	-@erase "$(INTDIR)\Init.sbr"
+	-@erase "$(INTDIR)\Math.obj"
+	-@erase "$(INTDIR)\Math.sbr"
+	-@erase "$(INTDIR)\vc40.pdb"
+	-@erase "$(OUTDIR)\OO3D.bsc"
+	-@erase "$(OUTDIR)\OO3D.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+# ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /c
+# ADD CPP /nologo /G5 /Zp4 /W3 /Gi /Zi /Od /I "..\OOInc" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fr /YX /c
+CPP_PROJ=/nologo /G5 /Zp4 /MLd /W3 /Gi /Zi /Od /I "..\OOInc" /D "WIN32" /D\
+ "_DEBUG" /D "_WINDOWS" /Fr"$(INTDIR)/" /Fp"$(INTDIR)/OO3D.pch" /YX\
+ /Fo"$(INTDIR)/" /Fd"$(INTDIR)/" /c 
+CPP_OBJS=.\Debug/
+CPP_SBRS=.\Debug/
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/OO3D.bsc" 
+BSC32_SBRS= \
+	"$(INTDIR)\3dsfile.sbr" \
+	"$(INTDIR)\Class_3DCamera.sbr" \
+	"$(INTDIR)\Class_3DLight.sbr" \
+	"$(INTDIR)\Class_3DMike.sbr" \
+	"$(INTDIR)\Class_3DScreen.sbr" \
+	"$(INTDIR)\Class_3DSoleil.sbr" \
+	"$(INTDIR)\Class_3DSolid.sbr" \
+	"$(INTDIR)\Class_3DSpace.sbr" \
+	"$(INTDIR)\Class_3DSpeaker.sbr" \
+	"$(INTDIR)\Class_Handle3D.sbr" \
+	"$(INTDIR)\Clip.sbr" \
+	"$(INTDIR)\Init.sbr" \
+	"$(INTDIR)\Math.sbr"
+
+"$(OUTDIR)\OO3D.bsc" : "$(OUTDIR)" $(BSC32_SBRS)
+    $(BSC32) @<<
+  $(BSC32_FLAGS) $(BSC32_SBRS)
+<<
+
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+LIB32_FLAGS=/nologo /out:"$(OUTDIR)/OO3D.lib" 
+LIB32_OBJS= \
+	"$(INTDIR)\3dsfile.obj" \
+	"$(INTDIR)\Class_3DCamera.obj" \
+	"$(INTDIR)\Class_3DLight.obj" \
+	"$(INTDIR)\Class_3DMike.obj" \
+	"$(INTDIR)\Class_3DScreen.obj" \
+	"$(INTDIR)\Class_3DSoleil.obj" \
+	"$(INTDIR)\Class_3DSolid.obj" \
+	"$(INTDIR)\Class_3DSpace.obj" \
+	"$(INTDIR)\Class_3DSpeaker.obj" \
+	"$(INTDIR)\Class_Handle3D.obj" \
+	"$(INTDIR)\Clip.obj" \
+	"$(INTDIR)\Init.obj" \
+	"$(INTDIR)\Math.obj"
+
+"$(OUTDIR)\OO3D.lib" : "$(OUTDIR)" $(DEF_FILE) $(LIB32_OBJS)
+    $(LIB32) @<<
+  $(LIB32_FLAGS) $(DEF_FLAGS) $(LIB32_OBJS)
+<<
+
+!ENDIF 
+
+.c{$(CPP_OBJS)}.obj:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cpp{$(CPP_OBJS)}.obj:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cxx{$(CPP_OBJS)}.obj:
+   $(CPP) $(CPP_PROJ) $<  
+
+.c{$(CPP_SBRS)}.sbr:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cpp{$(CPP_SBRS)}.sbr:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cxx{$(CPP_SBRS)}.sbr:
+   $(CPP) $(CPP_PROJ) $<  
+
+################################################################################
+# Begin Target
+
+# Name "OO3D - Win32 Release"
+# Name "OO3D - Win32 Debug"
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+!ENDIF 
+
+################################################################################
+# Begin Source File
+
+SOURCE=.\Math.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_MATH_=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Math.obj" : $(SOURCE) $(DEP_CPP_MATH_) "$(INTDIR)"
+
+"$(INTDIR)\Math.sbr" : $(SOURCE) $(DEP_CPP_MATH_) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_MATH_=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Math.obj" : $(SOURCE) $(DEP_CPP_MATH_) "$(INTDIR)"
+
+"$(INTDIR)\Math.sbr" : $(SOURCE) $(DEP_CPP_MATH_) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DSolid.c
+DEP_CPP_CLASS=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_buf.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_sound.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DSolid.obj" : $(SOURCE) $(DEP_CPP_CLASS) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSolid.sbr" : $(SOURCE) $(DEP_CPP_CLASS) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DSpace.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	".\3dsFile.h"\
+	
+
+"$(INTDIR)\Class_3DSpace.obj" : $(SOURCE) $(DEP_CPP_CLASS_) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSpace.sbr" : $(SOURCE) $(DEP_CPP_CLASS_) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	".\3dsFile.h"\
+	
+
+"$(INTDIR)\Class_3DSpace.obj" : $(SOURCE) $(DEP_CPP_CLASS_) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSpace.sbr" : $(SOURCE) $(DEP_CPP_CLASS_) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_Handle3D.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_H=\
+	"..\OOInc\class_appl.h"\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\class_sysevt.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_Handle3D.obj" : $(SOURCE) $(DEP_CPP_CLASS_H) "$(INTDIR)"
+
+"$(INTDIR)\Class_Handle3D.sbr" : $(SOURCE) $(DEP_CPP_CLASS_H) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_H=\
+	"..\OOInc\class_appl.h"\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\class_sysevt.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_Handle3D.obj" : $(SOURCE) $(DEP_CPP_CLASS_H) "$(INTDIR)"
+
+"$(INTDIR)\Class_Handle3D.sbr" : $(SOURCE) $(DEP_CPP_CLASS_H) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Clip.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLIP_=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Clip.obj" : $(SOURCE) $(DEP_CPP_CLIP_) "$(INTDIR)"
+
+"$(INTDIR)\Clip.sbr" : $(SOURCE) $(DEP_CPP_CLIP_) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLIP_=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Clip.obj" : $(SOURCE) $(DEP_CPP_CLIP_) "$(INTDIR)"
+
+"$(INTDIR)\Clip.sbr" : $(SOURCE) $(DEP_CPP_CLIP_) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DCamera.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_3=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DCamera.obj" : $(SOURCE) $(DEP_CPP_CLASS_3) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DCamera.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_3=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DCamera.obj" : $(SOURCE) $(DEP_CPP_CLASS_3) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DCamera.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DSoleil.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_3D=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DSoleil.obj" : $(SOURCE) $(DEP_CPP_CLASS_3D) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSoleil.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3D) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_3D=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DSoleil.obj" : $(SOURCE) $(DEP_CPP_CLASS_3D) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSoleil.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3D) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DLight.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_3DL=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DLight.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DL) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DLight.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DL) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_3DL=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DLight.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DL) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DLight.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DL) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DScreen.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_3DS=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DScreen.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DS) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DScreen.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DS) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_3DS=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DScreen.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DS) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DScreen.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DS) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DSpeaker.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_3DSP=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_sound.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DSpeaker.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DSP) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSpeaker.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DSP) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_3DSP=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_sound.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DSpeaker.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DSP) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DSpeaker.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DSP) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Class_3DMike.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_CLASS_3DM=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_sound.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DMike.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DM) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DMike.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DM) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_CLASS_3DM=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_gui_prv.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_sound.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Class_3DMike.obj" : $(SOURCE) $(DEP_CPP_CLASS_3DM) "$(INTDIR)"
+
+"$(INTDIR)\Class_3DMike.sbr" : $(SOURCE) $(DEP_CPP_CLASS_3DM) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\Init.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_INIT_=\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_init.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Init.obj" : $(SOURCE) $(DEP_CPP_INIT_) "$(INTDIR)"
+
+"$(INTDIR)\Init.sbr" : $(SOURCE) $(DEP_CPP_INIT_) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_INIT_=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\oo_init.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	
+
+"$(INTDIR)\Init.obj" : $(SOURCE) $(DEP_CPP_INIT_) "$(INTDIR)"
+
+"$(INTDIR)\Init.sbr" : $(SOURCE) $(DEP_CPP_INIT_) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\3dsfile.c
+
+!IF  "$(CFG)" == "OO3D - Win32 Release"
+
+DEP_CPP_3DSFI=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	".\3dsFile.h"\
+	
+
+"$(INTDIR)\3dsfile.obj" : $(SOURCE) $(DEP_CPP_3DSFI) "$(INTDIR)"
+
+"$(INTDIR)\3dsfile.sbr" : $(SOURCE) $(DEP_CPP_3DSFI) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "OO3D - Win32 Debug"
+
+DEP_CPP_3DSFI=\
+	"..\OOInc\class_root.h"\
+	"..\OOInc\oo_3d.h"\
+	"..\OOInc\oo_3d_prv.h"\
+	"..\OOInc\oo_class.h"\
+	"..\OOInc\OO_class_prv.h"\
+	"..\OOInc\oo_gfx.h"\
+	"..\OOInc\oo_gui.h"\
+	"..\OOInc\OO_list.h"\
+	"..\OOInc\OO_pool.h"\
+	"..\OOInc\oo_tags.h"\
+	"..\OOInc\ooprotos.h"\
+	"..\OOInc\OOTypes.h"\
+	".\3dsFile.h"\
+	
+
+"$(INTDIR)\3dsfile.obj" : $(SOURCE) $(DEP_CPP_3DSFI) "$(INTDIR)"
+
+"$(INTDIR)\3dsfile.sbr" : $(SOURCE) $(DEP_CPP_3DSFI) "$(INTDIR)"
+
+
+!ENDIF 
+
+# End Source File
+# End Target
+# End Project
+################################################################################
