@@ -1,7 +1,7 @@
 # OO
 Object Organizer - A multi-OS object engine
 
-The object engine is made of objects, with library objects specific to each OS when necessary.
+The object engine is made of objects in C language, with some objects specific to each OS when necessary.
 Applications source code can then be OS free by using OO objects.
 For now, the engine and the tests compile and run on Amiga and Windows.
 
