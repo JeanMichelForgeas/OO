@@ -1,5 +1,5 @@
 # OO
-Object Organizer - A multi-OS object engine
+Object Organizer 1996 - A multi-OS object engine
 
 The object engine is made of objects in C language, with some objects specific to each OS when necessary.
 Applications source code can then be OS free by using OO objects.
